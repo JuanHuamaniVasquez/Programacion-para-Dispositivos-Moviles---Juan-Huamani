@@ -8,7 +8,7 @@
     Fecha última modificación: 25/08/2025
 */
 
-fun main() {
+fun piedraPapelTijera() {
     // Se decidio usar números para las opciones para reducir la complejidad
     val opciones = (1..3).random()
     print("Elija un número (Piedra (1) --- Papel (2) --- Tijera (3) :")

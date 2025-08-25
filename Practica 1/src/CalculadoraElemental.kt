@@ -7,11 +7,11 @@
     Fecha última modificación: 25/08/2025
 */
 
-fun main() {
+fun calculadora() {
     var opcion: Int
 
     do {
-        mostrarMenu()
+        mostrarMenuCalculadora()
         opcion = readln().toInt()
 
         when (opcion) {
@@ -27,7 +27,7 @@ fun main() {
 }
 
 // Función que imprime el menú
-fun mostrarMenu() {
+fun mostrarMenuCalculadora() {
     println("==== Menú ====")
     println("1. Suma")
     println("2. Resta")

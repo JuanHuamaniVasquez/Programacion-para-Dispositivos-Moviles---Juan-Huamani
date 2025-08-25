@@ -8,7 +8,7 @@
     Fecha última modificación: 25/08/2025
 */
 
-fun main() {
+fun adivinarNumero() {
     val numeroSecreto = (1..30).random()
     val intentosMax = 5
     var intentos = 0

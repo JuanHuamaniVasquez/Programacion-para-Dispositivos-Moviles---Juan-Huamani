@@ -6,7 +6,7 @@
     Fecha última modificación: 25/08/2025
 */
 
-fun main() {
+fun evaluacionEmpleados() {
     print("Ingrese su salario mensual: ")
     val salario = readln().toInt()
 
