@@ -5,7 +5,8 @@ El objetivo es aprender los fundamentos de la programación en **Kotlin** y apli
 
 ## Contenido
 - **Práctica 1:** Introducción a Kotlin (estructuras básicas, funciones, control de flujo).  
-
+- **Práctica 2:** Clases y Objetos en Kotlin  
+  - Encapsulamiento, getters y setters, validaciones.
 ## Ejecución
 Cada práctica incluye instrucciones en su propio directorio/README para compilar y ejecutar los programas.
 
