@@ -1,4 +1,11 @@
-    package com.example.a1_interaccionimagenes
+/*
+Descripción: Imagen interactiva que muestra un mensaje mediante el uso de Toast
+Autor: Juan José Huamaní Vásquez
+Fecha creación: 09/09/2025
+Fecha última modificación: 11/09/2025
+*/
+
+package com.example.a1_interaccionimagenes
 
 import android.annotation.SuppressLint
 import android.os.Bundle
