@@ -8,16 +8,21 @@ import android.widget.Toast
 import android.widget.Toast.makeText
 
     class MainActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId", "ResourceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val img = findViewById<ImageView>(R.drawable.button)
+        // Referencia al ImageView
+        val imagen = findViewById<ImageView>(R.id.miImagen)
 
-        img.setOnClickListener {
-            Toast.makeText(this, "¡Hiciste clic en la imagen!", Toast.LENGTH_SHORT).show()
+        // Evento de clic
+        imagen.setOnClickListener {
+            Toast.makeText(this, R.string.click_imagen, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.click_imagen2, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.click_imagen3, Toast.LENGTH_SHORT).show()
+
         }
+
 
     }
 }

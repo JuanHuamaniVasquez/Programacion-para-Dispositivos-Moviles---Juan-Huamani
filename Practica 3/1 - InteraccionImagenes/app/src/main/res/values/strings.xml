@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Practica3ImagenToast</string>
-    <string name="desc_imagen">Imagen de prueba</string>
+    <string name="desc_imagen">Cuidado!! No toques la imagen</string>
+    <string name="click_imagen">Te dije que no lo hicieras</string>
+    <string name="click_imagen2">3 2 1...</string>
+    <string name="click_imagen3">Hola Mundo!</string>
+
 </resources>
