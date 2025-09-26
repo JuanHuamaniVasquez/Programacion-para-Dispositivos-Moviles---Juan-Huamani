@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EditorDePerfil</string>
+    <string name="etNombreString">Nombre</string>
+    <string name="etEdadString">Edad</string>
+    <string name="etCiudadString">Ciudad</string>
+    <string name="etCorreoString">Correo electrónico</string>
+    <string name="btnContinuarString">Continuar</string>
+    <string name="tvResumenString">Resumen</string>
+    <string name="btnConfirmarString">Confirmar</string>
+    <string name="btnEditarString">Volver a editar</string>
+    <string name="tvResumen">Resumen</string>
+    <string name="tvConfirmarString">Confirmar</string>
+    <string name="btnEditarStrng">Volver a editar</string>
+    <string name="resumen_usuario">
+    Nombre: %1$s\nEdad: %2$s\nCiudad: %3$s\nCorreo: %4$s
+    </string>
+</resources>
