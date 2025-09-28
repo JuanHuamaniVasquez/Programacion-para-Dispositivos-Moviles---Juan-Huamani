@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EditoDeNotas</string>
+    <string name="etNotaejem">Escribe tu nota aquí...</string>
+    <string name="btnCompartir">Compartir</string>
+    <string name="btnCorreo">Compartir por correo</string>
+    <string name="btnEditar">Editar de nuevo</string>
+    <string name="tvEditor">Editor de Notas</string>
+</resources>
