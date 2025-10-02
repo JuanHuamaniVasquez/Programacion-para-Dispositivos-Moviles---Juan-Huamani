@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="horizontal" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.85"
+        android:orientation="horizontal" />
+
+    <TextView
+        android:id="@+id/tvSeleccionExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvExtra"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbBebida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbBebida"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSeleccionExtras" />
+
+    <CheckBox
+        android:id="@+id/cbPapas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbPapas"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbBebida" />
+
+    <CheckBox
+        android:id="@+id/cbPostre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cbPostre"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cbPapas" />
+
+    <Button
+        android:id="@+id/btnSiguienteExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnSiguiente"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/guidelineBottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

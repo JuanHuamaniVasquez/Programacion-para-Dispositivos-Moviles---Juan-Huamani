@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.configuradorpedidoscomida.InicioFragment"
+        android:label="Inicio">
+        <action
+            android:id="@+id/action_inicioFragment_to_seleccionComidaFragment"
+            app:destination="@id/seleccionComidaFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seleccionComidaFragment"
+        android:name="com.example.configuradorpedidoscomida.SeleccionComidaFragment"
+        android:label="Seleccion Comida">
+        <action
+            android:id="@+id/action_seleccionComidaFragment_to_seleccionExtrasFragment"
+            app:destination="@id/seleccionExtrasFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/seleccionExtrasFragment"
+        android:name="com.example.configuradorpedidoscomida.SeleccionExtrasFragment"
+        android:label="Seleccion Extras">
+        <action
+            android:id="@+id/action_seleccionExtrasFragment_to_resumenPedidoFragment"
+            app:destination="@id/resumenPedidoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resumenPedidoFragment"
+        android:name="com.example.configuradorpedidoscomida.ResumenPedidoFragment"
+        android:label="Resumen Pedido">
+        <action
+            android:id="@+id/action_resumenPedidoFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_out_right"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+</navigation>

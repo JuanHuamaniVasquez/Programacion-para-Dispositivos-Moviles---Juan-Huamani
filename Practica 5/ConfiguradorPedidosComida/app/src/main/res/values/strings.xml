@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ConfiguradorPedidosComida</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tvInicio">Bienvenido al Configurador de Pedido</string>
+    <string name="btnNuevoPedido">Nuevo Pedido</string>
+    <string name="tvTitulo">Configurador de Pedido</string>
+    <string name="tvResumenPedido">Resumen del Pedido</string>
+    <string name="tvResumen">Aquí aparecerá el resumen...</string>
+    <string name="btnConfirmar">Confirmar Pedido</string>
+    <string name="btnEditar">Editar Pedido</string>
+    <string name="rbPizza">Pizza</string>
+    <string name="rbHamburguesa">Hamburguesa</string>
+    <string name="rbEnsalada">Ensalada</string>
+    <string name="btnSiguiente">Siguiente</string>
+    <string name="cbPostre">Postre</string>
+    <string name="cbPapas">Papas fritas</string>
+    <string name="cbBebida">Bebida</string>
+    <string name="tvExtra">Seleccione extras:</string>
+    <string name="tvSeleccionComida">Seleccione su comida:</string>
+</resources>
