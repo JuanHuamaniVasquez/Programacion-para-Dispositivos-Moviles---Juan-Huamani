@@ -16,7 +16,7 @@ import android.widget.Toast
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 
-class ResumenPedidoFragment : Fragment(R.layout.fragm   ent_resumen_pedido) {
+class ResumenPedidoFragment : Fragment(R.layout.fragment_resumen_pedido) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
