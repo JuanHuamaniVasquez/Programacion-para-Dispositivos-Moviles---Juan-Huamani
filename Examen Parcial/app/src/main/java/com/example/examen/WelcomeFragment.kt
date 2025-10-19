@@ -14,21 +14,24 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         // Referencia al botón
         val btnStart = view.findViewById<Button>(R.id.btnStart)
 
+        // Mostrar las reglas del juego
+        showRulesDialog()
+
         // Navegar al juego
         btnStart.setOnClickListener {
-            // Mostrar las reglas del juego al tocar el boton Iniciar Juego
-            showRulesDialog()
             findNavController().navigate(R.id.action_welcome_to_game)
         }
     }
 
     private fun showRulesDialog() {
         AlertDialog.Builder(requireContext())
-            .setTitle("Reglas del juego")
+            .setTitle("Bienvenido al Juego de Colores")
             .setMessage(
+                "Reglas del juego:\n"+
                 "Aparecerá un color en pantalla.\n" +
                         "Presiona el botón que coincida con ese color.\n" +
                         "Cada acierto suma 1 punto.\n" +
+                        "Cada fallo resta 1 punto.\n" +
                         "Tienes 30 segundos para lograr el mayor puntaje.\n\n" +
                         "¡Buena suerte!"
             )
