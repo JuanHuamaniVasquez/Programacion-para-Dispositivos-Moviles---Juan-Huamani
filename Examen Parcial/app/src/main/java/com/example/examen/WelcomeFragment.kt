@@ -1,11 +1,41 @@
 package com.example.examen
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
+        // Referencia al botón
+        val btnStart = view.findViewById<Button>(R.id.btnStart)
+
+        // Navegar al juego
+        btnStart.setOnClickListener {
+            // Mostrar las reglas del juego al tocar el boton Iniciar Juego
+            showRulesDialog()
+            findNavController().navigate(R.id.action_welcome_to_game)
+        }
+    }
+
+    private fun showRulesDialog() {
+        AlertDialog.Builder(requireContext())
+            .setTitle("Reglas del juego")
+            .setMessage(
+                "Aparecerá un color en pantalla.\n" +
+                        "Presiona el botón que coincida con ese color.\n" +
+                        "Cada acierto suma 1 punto.\n" +
+                        "Tienes 30 segundos para lograr el mayor puntaje.\n\n" +
+                        "¡Buena suerte!"
+            )
+            .setPositiveButton("Entendido") { dialog, _ ->
+                dialog.dismiss()
+            }
+            .setCancelable(false)
+            .show()
+    }
 }
