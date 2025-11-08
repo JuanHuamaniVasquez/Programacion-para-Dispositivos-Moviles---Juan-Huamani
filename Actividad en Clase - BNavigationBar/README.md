@@ -64,23 +64,22 @@ Tener instalado:
    
 Porque el índice del tab (_selectedIndex) y el nombre del usuario cambian con las acciones del usuario. Un StatelessWidget no podría actualizar el contenido dinámicamente.
 
-3. **¿Ventajas de separar cada pestaña?**
+2. **¿Ventajas de separar cada pestaña?**
    
 Mejor organización, mantenimiento y legibilidad. Cada pestaña puede tener su propio StatefulWidget con su lógica independiente.
 
-5. **¿Qué cambia con rutas nombradas?**
+3. **¿Qué cambia con rutas nombradas?**
    
 En lugar de Navigator.push(context, MaterialPageRoute(...)), se usaría Navigator.pushNamed(context, '/editar').
 Esto facilita la gestión de muchas pantallas en proyectos grandes.
 
-7. **¿Por qué usar Navigator.pop(context, data)?**
+4. **¿Por qué usar Navigator.pop(context, data)?**
    
 Permite regresar datos a la pantalla anterior, como el nombre editado en este caso, manteniendo la comunicación entre pantallas.
 
-9. **¿Qué mejoras podrías hacer?**
+5. **¿Qué mejoras podrías hacer?**
    * Agregar imagen de perfil.
    * Guardar el nombre con `SharedPreferences`.
-   * Usar `BottomNavigationBarType.fixed` o `shifting` con más estilo.
    * Añadir temas claros/oscuros.
 
 ---
