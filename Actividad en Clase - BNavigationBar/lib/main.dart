@@ -27,11 +27,25 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = const [
-    Center(child: Text('Inicio', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Usuarios', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Configuración', style: TextStyle(fontSize: 24))),
-    Center(child: Text('Perfil', style: TextStyle(fontSize: 24))),
+  final List<Widget> _pages = [
+    const Center(child: Text('Inicio', style: TextStyle(fontSize: 24))),
+    const Center(child: Text('Usuarios', style: TextStyle(fontSize: 24))),
+    const Center(child: Text('Configuración', style: TextStyle(fontSize: 24))),
+    Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('Perfil', style: TextStyle(fontSize: 24)),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              print('Editar perfil presionado');
+            },
+            child: const Text('Editar perfil'),
+          ),
+        ],
+      ),
+    ),
   ];
 
   void _onItemTapped(int index) {
