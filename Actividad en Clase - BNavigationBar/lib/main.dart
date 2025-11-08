@@ -31,6 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Center(child: Text('Inicio', style: TextStyle(fontSize: 24))),
     Center(child: Text('Usuarios', style: TextStyle(fontSize: 24))),
     Center(child: Text('Configuración', style: TextStyle(fontSize: 24))),
+    Center(child: Text('Perfil', style: TextStyle(fontSize: 24))),
   ];
 
   void _onItemTapped(int index) {
@@ -51,6 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
           BottomNavigationBarItem(icon: Icon(Icons.people), label: 'Usuarios'),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Config'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
         ],
       ),
     );
