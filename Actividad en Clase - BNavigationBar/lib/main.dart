@@ -27,7 +27,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
 
-  final List<Widget> _pages = [
+  late final List<Widget> _pages = [
     const Center(child: Text('Inicio', style: TextStyle(fontSize: 24))),
     const Center(child: Text('Usuarios', style: TextStyle(fontSize: 24))),
     const Center(child: Text('Configuración', style: TextStyle(fontSize: 24))),
@@ -39,7 +39,10 @@ class _MyHomePageState extends State<MyHomePage> {
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
-              print('Editar perfil presionado');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const EditarPerfilScreen()),
+              );
             },
             child: const Text('Editar perfil'),
           ),
@@ -68,6 +71,20 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Config'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Perfil'),
         ],
+      ),
+    );
+  }
+}
+
+class EditarPerfilScreen extends StatelessWidget {
+  const EditarPerfilScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Editar perfil')),
+      body: const Center(
+        child: Text('Pantalla Editar Perfil'),
       ),
     );
   }
