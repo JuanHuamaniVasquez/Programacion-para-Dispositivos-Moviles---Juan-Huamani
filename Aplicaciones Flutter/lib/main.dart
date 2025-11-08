@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mi App Personal',
       theme: ThemeData(primarySwatch: Colors.teal),
-      home: const PantallaPerfil(),
+      home: const PantallaHobbies(),
       // Cambia a PantallaPerfil() o PantallaHobbies() para probar
     );
   }
