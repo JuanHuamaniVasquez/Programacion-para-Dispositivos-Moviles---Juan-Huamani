@@ -8,27 +8,32 @@ class PantallaPerfil extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Mi Perfil')),
       body: SingleChildScrollView(
+        // Permite desplazarse si el contenido excede la pantalla
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // Imagen circular de perfil usando internet
               const CircleAvatar(
                 radius: 60,
                 backgroundImage: NetworkImage('https://images.unsplash.com/photo-1507149833265-60c372daea22')
 ,
               ),
               const SizedBox(height: 20),
+              // Nombre del usuario
               const Text(
                 'Juan José Huamani Vásquez',
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 10),
+              // Descripción breve
               const Text(
                 'Estudiante de Ingeniería de Software • Apasionado por la ciberseguridad',
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 30),
+              // Información de contacto con ícono y texto
               const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

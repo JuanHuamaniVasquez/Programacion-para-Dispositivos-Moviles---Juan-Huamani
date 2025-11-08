@@ -6,11 +6,11 @@ class PantallaHobbies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Mis Hobbies')),
+      appBar: AppBar(title: const Text('Mis Hobbies')),// Barra superior
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,// Alinea texto a la izquierda
           children: [
             const Text(
               'Actividades que disfruto:',

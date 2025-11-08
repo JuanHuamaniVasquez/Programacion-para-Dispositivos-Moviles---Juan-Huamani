@@ -6,7 +6,7 @@ import 'pantalla_hobbies.dart';
 void main() {
   runApp(const MyApp());
 }
-
+// Widget raíz de la aplicación
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -17,7 +17,6 @@ class MyApp extends StatelessWidget {
       title: 'Mi App Personal',
       theme: ThemeData(primarySwatch: Colors.teal),
       home: const PantallaHobbies(),
-      // Cambia a PantallaPerfil() o PantallaHobbies() para probar
     );
   }
 }

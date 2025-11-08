@@ -6,12 +6,13 @@ class PantallaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Bienvenido')),
+      appBar: AppBar(title: const Text('Bienvenido')),// Barra superior
       body: Center(
+        // Centra los elementos en pantalla
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,// Centra verticalmente
             children: [
               const Text(
                 '¡Hola! Bienvenido a mi aplicación personal',
@@ -20,7 +21,7 @@ class PantallaInicio extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {},// Sin funcionalidad
                 child: const Text('Ver mi perfil'),
               ),
             ],
