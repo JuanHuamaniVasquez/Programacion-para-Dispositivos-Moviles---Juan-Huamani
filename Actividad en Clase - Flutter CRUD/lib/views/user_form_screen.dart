@@ -14,6 +14,7 @@ class UserFormScreen extends StatefulWidget {
 class _UserFormScreenState extends State<UserFormScreen> {
   final _formKey = GlobalKey<FormState>();
   late String _nombre;
+  late String _correo;
   late int _edad;
   String _genero = 'Masculino';
   bool _activo = true;
@@ -26,9 +27,11 @@ class _UserFormScreenState extends State<UserFormScreen> {
       _genero = widget.usuario!.genero;
       _activo = widget.usuario!.activo;
       _edad = widget.usuario!.edad;
+      _correo = widget.usuario!.correo;
     } else {
       _edad = 0;
       _nombre = '';
+      _correo = '';
     }
   }
 
@@ -67,6 +70,18 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 },
                 onSaved: (value) => _edad = int.parse(value!),
               ),
+              TextFormField(
+                initialValue: _correo,
+                decoration: const InputDecoration(labelText: 'Correo electrónico'),
+                keyboardType: TextInputType.emailAddress,
+                validator: (value) {
+                  if (value == null || value.isEmpty) return 'Ingrese un correo';
+                  final emailRegExp = RegExp(r'^[^@]+@[^@]+\.[^@]+$');
+                  return emailRegExp.hasMatch(value) ? null : 'Correo no válido';
+                },
+                onSaved: (value) => _correo = value!,
+              ),
+
               const SizedBox(height: 20),
               const Text('Género'),
               Row(
@@ -99,7 +114,7 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    final user = User(nombre: _nombre, genero: _genero, activo: _activo, edad: _edad);
+                    final user = User(nombre: _nombre, genero: _genero, activo: _activo, edad: _edad, correo: _correo);
                     Navigator.pop(context, user);
                   }
                 },

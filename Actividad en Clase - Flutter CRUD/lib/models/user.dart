@@ -3,6 +3,7 @@ class User {
   String genero; // 'Masculino' o 'Femenino'
   bool activo;
   int edad;
+  String correo;
 
 
   User({
@@ -10,5 +11,6 @@ class User {
     required this.genero,
     required this.activo,
     required this.edad,
+    required this.correo,
   });
 }
