@@ -20,7 +20,7 @@ class UserListScreen extends StatelessWidget {
           return Card(
             child: ListTile(
               title: Text(user.nombre),
-              subtitle: Text('${user.genero} - ${user.activo ? 'Activo' : 'Inactivo'}'),
+              subtitle: Text('${user.genero} - ${user.activo ? 'Activo' : 'Inactivo'} - Edad: ${user.edad}'),
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [

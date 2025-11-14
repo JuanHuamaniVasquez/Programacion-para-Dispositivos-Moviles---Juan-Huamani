@@ -14,6 +14,7 @@ class UserFormScreen extends StatefulWidget {
 class _UserFormScreenState extends State<UserFormScreen> {
   final _formKey = GlobalKey<FormState>();
   late String _nombre;
+  late int _edad;
   String _genero = 'Masculino';
   bool _activo = true;
 
@@ -24,7 +25,9 @@ class _UserFormScreenState extends State<UserFormScreen> {
       _nombre = widget.usuario!.nombre;
       _genero = widget.usuario!.genero;
       _activo = widget.usuario!.activo;
+      _edad = widget.usuario!.edad;
     } else {
+      _edad = 0;
       _nombre = '';
     }
   }
@@ -47,6 +50,17 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 validator: (value) =>
                 value == null || value.isEmpty ? 'Ingrese un nombre válido' : null,
                 onSaved: (value) => _nombre = value!,
+              ),
+              TextFormField(
+                initialValue: _edad == 0 ? '' : _edad.toString(),
+                decoration: const InputDecoration(labelText: 'Edad'),
+                keyboardType: TextInputType.number,
+                validator: (value) {
+                  if (value == null || value.isEmpty) return 'Ingrese una edad válida';
+                  final num? e = int.tryParse(value);
+                  return (e == null || e <= 0) ? 'La edad debe ser mayor a 0' : null;
+                },
+                onSaved: (value) => _edad = int.parse(value!),
               ),
               const SizedBox(height: 20),
               const Text('Género'),
@@ -80,7 +94,7 @@ class _UserFormScreenState extends State<UserFormScreen> {
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
                     _formKey.currentState!.save();
-                    final user = User(nombre: _nombre, genero: _genero, activo: _activo);
+                    final user = User(nombre: _nombre, genero: _genero, activo: _activo, edad: _edad);
                     Navigator.pop(context, user);
                   }
                 },
