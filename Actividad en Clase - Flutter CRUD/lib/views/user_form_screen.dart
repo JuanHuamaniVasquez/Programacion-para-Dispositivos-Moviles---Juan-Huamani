@@ -47,9 +47,14 @@ class _UserFormScreenState extends State<UserFormScreen> {
               TextFormField(
                 initialValue: _nombre,
                 decoration: const InputDecoration(labelText: 'Nombre'),
-                validator: (value) =>
-                value == null || value.isEmpty ? 'Ingrese un nombre válido' : null,
-                onSaved: (value) => _nombre = value!,
+                validator: (value) {
+                  if (value == null || value.trim().isEmpty) {
+                    return 'El nombre no puede estar vacío';
+                  }
+                    return null;
+                },
+
+          onSaved: (value) => _nombre = value!,
               ),
               TextFormField(
                 initialValue: _edad == 0 ? '' : _edad.toString(),
