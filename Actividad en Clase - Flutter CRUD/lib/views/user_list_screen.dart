@@ -12,11 +12,20 @@ class UserListScreen extends StatelessWidget {
     final viewModel = context.watch<UserViewModel>();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista de Usuarios')),
+      appBar: AppBar(title: const Text('Lista de Usuarios'),
+          actions: [
+            Consumer<UserViewModel>(
+              builder: (_, vm, __) => Switch(
+                value: vm.soloActivos,
+                onChanged: (v) => vm.cambiarFiltro(v),
+               ),
+             ),
+          ],
+      ),
       body: ListView.builder(
-        itemCount: viewModel.usuarios.length,
+        itemCount: viewModel.usuariosFiltrados.length,
         itemBuilder: (context, index) {
-          final user = viewModel.usuarios[index];
+          final user = viewModel.usuariosFiltrados[index];
           return Card(
             child: ListTile(
               title: Text(user.nombre),
