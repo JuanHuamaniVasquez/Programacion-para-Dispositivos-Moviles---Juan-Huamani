@@ -59,6 +59,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   if (value.length < 6) {
                     return 'Debe tener al menos 6 caracteres';
                   }
+                  // Actividad 1 – Validación adicional
+                  if (!value.contains(RegExp(r'[A-Z]'))) {
+                    return 'Debe tener al menos una mayúscula';
+                  }
+                  if (!value.contains(RegExp(r'[0-9]'))) {
+                     return 'Debe tener al menos un número';
+                  }
                   return null;
                 },
                 onSaved: (value) => _password = value!,
