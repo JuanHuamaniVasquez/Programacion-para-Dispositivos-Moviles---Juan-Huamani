@@ -83,12 +83,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => UserListScreen(),
+                        builder: (_) => UserListScreen(email: _email),
                       ),
                     );
                   }
                 },
                 child: const Text('Ingresar'),
+              ),
+              const SizedBox(height: 18),
+
+              // Actividad 2 – Mejorar interfaz:
+              // - Botón "Crear cuenta"
+              // - Texto "¿Olvidaste tu contraseña?"
+              TextButton(
+                onPressed: () {
+                },
+                child: const Text('Crear cuenta'),
+              ),
+              TextButton(
+                onPressed: () {
+                },
+                child: const Text('¿Olvidaste tu contraseña?'),
               ),
             ],
           ),

@@ -5,14 +5,18 @@ import '../models/user.dart';
 import 'user_form_screen.dart';
 
 class UserListScreen extends StatelessWidget {
-  const UserListScreen({super.key});
+  final String email;
 
+  const UserListScreen({
+    super.key,
+    required this.email,
+  });
   @override
   Widget build(BuildContext context) {
     final viewModel = context.watch<UserViewModel>();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Lista de Usuarios'),
+      appBar: AppBar(title: Text('Bienvenido: $email'),
         actions: [
           Consumer<UserViewModel>(
             builder: (_, vm, __) => Switch(
